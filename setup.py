@@ -19,10 +19,9 @@ setup(
     name='coveralls',
     version='1.1',
     packages=['coveralls'],
-    url='http://github.com/coagulant/coveralls-python',
+    url='http://github.com/coveralls-clients/coveralls-python',
     license='MIT',
-    author='Ilya Baryshev',
-    author_email='baryshev@gmail.com',
+    author='coveralls-clients contributors',
     description='Show coverage stats online via coveralls.io',
     long_description=open('README.rst').read() + '\n\n' + open('CHANGELOG.rst').read(),
     entry_points={
