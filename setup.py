@@ -1,6 +1,15 @@
+import os
 import sys
 from setuptools.command.test import test as TestCommand
 from setuptools import setup
+
+
+VERSION_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                            'coveralls', 'version.py')
+
+VERSION = None
+with open(VERSION_FILE, 'r') as f:
+    VERSION = f.read().split()[2]
 
 
 class PyTest(TestCommand):
@@ -17,7 +26,7 @@ class PyTest(TestCommand):
 
 setup(
     name='coveralls',
-    version='1.1',
+    version=VERSION,
     packages=['coveralls'],
     url='http://github.com/coveralls-clients/coveralls-python',
     license='MIT',
